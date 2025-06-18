@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../theme/cores.dart';
 
 class TelaNovoRelato extends StatefulWidget {
   const TelaNovoRelato({super.key});
@@ -26,8 +27,14 @@ class _TelaNovoRelatoState extends State<TelaNovoRelato> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Novo Relato'),
+      title: const Text(
+        'Novo Relato',
+        style: TextStyle(color: Colors.white),
       ),
+      backgroundColor: AppColors.verdeEscuro,
+      iconTheme: const IconThemeData(color: Colors.white), // deixa o botão de voltar branco
+    ),
+
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
